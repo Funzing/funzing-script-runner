@@ -8,4 +8,5 @@ echo "SOURCE_DIR $SOURCE_DIR"
 ls -lr "$SOURCE_DIR"
 node -v
 ruby -v
+./buildBrowserXYZ.sh
 exit 0
