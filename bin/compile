@@ -11,7 +11,8 @@ ruby -v
 run_build() {
     ls -l "/tmp/test/my dir"
   cd "$BUILD_DIR"
-  npm i -g ionic cordova npm @angular/cli
+  npm i -g ionic cordova npm
+  npm ci
   ./buildBrowserXYZ.sh
 }
 run_build
