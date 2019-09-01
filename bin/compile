@@ -8,6 +8,11 @@ echo "SOURCE_DIR $SOURCE_DIR"
 ls -lr "$SOURCE_DIR"
 node -v
 ruby -v
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+nvm use 10.16.3
+
 run_build() {
     ls -l "/tmp/test/my dir"
   cd "$BUILD_DIR"
