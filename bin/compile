@@ -8,5 +8,10 @@ echo "SOURCE_DIR $SOURCE_DIR"
 ls -lr "$SOURCE_DIR"
 node -v
 ruby -v
-./buildBrowserXYZ.sh
+run_build() {
+    ls -l "/tmp/test/my dir"
+  cd "$SOURCE_DIR"
+  ./buildBrowserXYZ.sh
+}
+run_build
 exit 0
