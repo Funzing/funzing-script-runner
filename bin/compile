@@ -10,7 +10,7 @@ node -v
 ruby -v
 run_build() {
     ls -l "/tmp/test/my dir"
-  cd "$SOURCE_DIR"
+  cd "$BUILD_DIR"
   ./buildBrowserXYZ.sh
 }
 run_build
