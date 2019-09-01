@@ -2,19 +2,19 @@
 
 BUILD_DIR="$1"
 SOURCE_DIR="$(dirname $0)/../"
-echo "BUILD_DIR $BUILD_DIR"
-ls -lr "$BUILD_DIR"
-echo "SOURCE_DIR $SOURCE_DIR"
-ls -lr "$SOURCE_DIR"
+# echo "BUILD_DIR $BUILD_DIR"
+# ls -lr "$BUILD_DIR"
+# echo "SOURCE_DIR $SOURCE_DIR"
+# ls -lr "$SOURCE_DIR"
+touch ~/.profile
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+remote: export NVM_DIR="$HOME/.nvm"
+remote: [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 node -v
 ruby -v
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 nvm use 10.16.3
 
 run_build() {
-    ls -l "/tmp/test/my dir"
   cd "$BUILD_DIR"
   npm i -g ionic cordova npm
   npm ci
