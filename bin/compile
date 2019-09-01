@@ -3,6 +3,9 @@
 BUILD_DIR="$1"
 SOURCE_DIR="$(dirname $0)/../"
 echo "BUILD_DIR $BUILD_DIR"
+ls -lr "$BUILD_DIR"
 echo "SOURCE_DIR $SOURCE_DIR"
+ls -lr "$SOURCE_DIR"
 node -v
+ruby -v
 exit 0
