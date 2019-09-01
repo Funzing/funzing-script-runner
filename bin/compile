@@ -4,5 +4,5 @@ BUILD_DIR="$1"
 SOURCE_DIR="$(dirname $0)/../"
 echo "BUILD_DIR $BUILD_DIR"
 echo "SOURCE_DIR $SOURCE_DIR"
-
+node -v
 exit 0
